@@ -1,0 +1,12 @@
+name: WishGift
+version: ${project.version}
+main: cn.marinda.wishgift.WishGift
+authors: [ Marinda ]
+description: this Spigot Plugins description
+softdepend: [VexView]
+commands:
+  wg:
+    description: "description"
+    usage: /wg
+    aliases: [wg]
+

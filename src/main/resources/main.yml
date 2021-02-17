@@ -1,0 +1,43 @@
+Url: '[local]item.png'
+X: -1
+Y: -1
+Width: 200
+Height: 400
+CheckBox:
+  Url1: '[local]HUD11/1.png'
+  Url2: '[local]HUD11/2.png'
+  X: 100
+  deviationX: 10
+  Y: 100
+  deviationY: 0
+  Width: 50
+  Height: 50
+  Text: '&a&l50倍率'
+  Beishu: 1
+CheckBox5:
+  Url1: '[local]HUD11/1.png'
+  Url2: '[local]HUD11/2.png'
+  X: 100
+  deviationX: 10
+  Y: 100
+  deviationY: 0
+  Width: 50
+  Height: 50
+  Text: '&d&l400倍率'
+  Beishu: 1
+Field:
+  X: 0
+  Y: 0
+  Width: 50
+  Height: 10
+  MaxString: 3
+  ID: 1
+Button:
+  Id: '1'
+  Name: ''
+  Url1: '[local]HUD11/3.png'
+  Url2: '[local]HUD11/4.png'
+  X: 150
+  Y: 200
+  Width: 80
+  Height: 80
