@@ -17,7 +17,6 @@ public class VexGuiKeysEvent implements Listener {
 
             VexImageTag loginImg = new VexImageTag("id_s",0,3,0,"[local]login.png",10,10,1,1,td);
             VexViewAPI.addPlayerTag(e.getPlayer(),loginImg);
-
         }
     }
 
