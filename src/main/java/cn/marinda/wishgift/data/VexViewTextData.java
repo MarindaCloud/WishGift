@@ -7,8 +7,8 @@ public class VexViewTextData {
     private int x;
     private int y;
     private List<String> textList = new ArrayList<>();
-    private int scale;
-    public VexViewTextData(int x,int y,List<String> textList,int scale){
+    private double scale;
+    public VexViewTextData(int x,int y,List<String> textList,double scale){
         this.x = x;
         this.y = y;
         this.scale = scale;
@@ -39,7 +39,7 @@ public class VexViewTextData {
         this.textList = textList;
     }
 
-    public int getScale() {
+    public double getScale() {
         return scale;
     }
 

@@ -54,13 +54,13 @@ vexTexts:
     y: 10
     text:
       - '这是menu界面'
-    scale: 1.5
+    scale: 1
   'money_title':
     x: 10
     y: 10
     text:
       - '这是menu界面'
-    scale: 1.5
+    scale: 1
   'points_title':
     x: 10
     y: 10

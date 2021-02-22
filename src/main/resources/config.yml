@@ -105,7 +105,100 @@ points:
 vault:
   #默认100金币一次
   consume: 100
-  prizeItem:
-    - 'vault_jp_01'
-    - 'vault_jp_02'
-    - 'vault_jp_03'
+  #每次增加的幸运值 默认为5 0-5  填写其他则0-新值
+  addNumber: 5
+  #总奖池的展示物品 皆为图片 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+  totalWishPrizeImg:
+    - 'points_jp_01'
+    - 'points_jp_02'
+    - 'points_jp_03'
+    - 'points_jp_04'
+    - 'points_jp_05'
+    - 'points_jp_06'
+    - 'points_jp_07'
+    - 'points_jp_08'
+    - 'points_jp_09'
+    - 'points_jp_10'
+    - 'points_jp_11'
+    - 'points_jp_12'
+    - 'points_jp_13'
+    - 'points_jp_14'
+  #达到指定幸运值
+  lucky:
+    #幸运值 0-5 以此类推
+    5:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_01'
+        - 'points_jp_02'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/mm give  {player} text1 1'
+    #幸运值 6-30 以此类推
+    30:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_01'
+        - 'points_jp_02'
+        - 'points_jp_03'
+        - 'points_jp_04'
+        - 'points_jp_05'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/m {player} 你好幸运'
+    #幸运值 31-60 以此类推
+    60:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_06'
+        - 'points_jp_07'
+        - 'points_jp_08'
+        - 'points_jp_09'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/m {player} 你好幸运'
+    #幸运值 61-70 以此类推
+    70:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_09'
+        - 'points_jp_10'
+        - 'points_jp_11'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/m {player} 你好幸运'
+    #幸运值 71-90 以此类推
+    90:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_09'
+        - 'points_jp_10'
+        - 'points_jp_11'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/m {player} 你好幸运'
+    #必中
+    100:
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_12'
+        - 'points_jp_13'
+        - 'points_jp_14'
+      #是否支持重复中某物品
+      isRepeat: false
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give {player} 1000'
+        - '/points give {player} 1000'
+        - '/m {player} 你好幸运'
+

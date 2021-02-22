@@ -2,6 +2,7 @@ package cn.marinda.wishgift;
 
 import cn.marinda.wishgift.commands.WishGiftCommand;
 import cn.marinda.wishgift.listener.VexGuiKeysEvent;
+import cn.marinda.wishgift.mannager.ConfigMannager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -13,7 +14,6 @@ public final class WishGift extends JavaPlugin {
     public void onEnable() {
         plugin = this;
         // Plugin startup logic
-        saveDefaultConfig();
         defaultPluginMannager();
         defaultConfiguration();
         Bukkit.getConsoleSender().sendMessage("§6[WishGift]插件加载成功！");
@@ -31,6 +31,8 @@ public final class WishGift extends JavaPlugin {
     }
 
     private void defaultConfiguration(){
+            saveDefaultConfig();
             saveResource("lang.yml",false);
+            saveResource("component.yml",false);
     }
 }
