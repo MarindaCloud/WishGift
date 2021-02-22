@@ -13,8 +13,6 @@ public class ConfigData {
     private List<String> totalWishPrizeImg = new ArrayList<>();
     private Map<String,PointsLuckyData> luckyData = new HashMap<>();
     public ConfigData(){
-
-
     }
 
 }
