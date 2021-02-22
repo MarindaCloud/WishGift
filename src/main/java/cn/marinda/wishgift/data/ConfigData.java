@@ -14,6 +14,7 @@ public class ConfigData {
     private Map<String,PointsLuckyData> luckyData = new HashMap<>();
     public ConfigData(){
 
+
     }
 
 }
