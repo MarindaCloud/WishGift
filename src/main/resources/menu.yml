@@ -1,5 +1,8 @@
 #许愿界面初始化
 wish:
   vault:
-    guiName: ''
+    guiName: 'money'
   playerpoints:
+    guiName: 'points'
+  menu:
+    guiName: 'menu'

@@ -1,0 +1,118 @@
+#gui组件
+gui:
+  'menu':
+    localGui: '[local]gui.png'
+    x: -1
+    y: -1
+    width: 240
+    height: 158
+    vexText:
+      - 'menu_title'
+    vexImg:
+      - 'img_01'
+      - 'img_02'
+      - ''
+    vexTextField: ''
+    vexButton:
+      - 'button_01'
+      - ''
+  'money':
+      localGui: '[local]money.png'
+      x: -1
+      y: -1
+      width: 240
+      height: 158
+      vexText:
+        - ''
+      vexImg:
+        - ''
+        - ''
+        - ''
+      vexTextField: ''
+      vexButton:
+        - ''
+        - ''
+  'points':
+    localGui: '[local]gui.png'
+    x: -1
+    y: -1
+    width: 240
+    height: 158
+    vexText:
+      - ''
+    vexImg:
+      - ''
+      - ''
+      - ''
+    vexTextField: ''
+    vexButton:
+      - ''
+      - ''
+vexTexts:
+  'menu_title':
+    x: 10
+    y: 10
+    text:
+      - '这是menu界面'
+    scale: 1.5
+  'money_title':
+    x: 10
+    y: 10
+    text:
+      - '这是menu界面'
+    scale: 1.5
+  'points_title':
+    x: 10
+    y: 10
+    text:
+      - '这是menu界面'
+    scale: 1.5
+vexTextField:
+  'points_wishNumber_Field':
+    x: 50
+    y: 50
+    width: 100
+    height: 15
+    maxLength: 55
+    id: 0
+    defaultText: "1"
+  'vault_wishNumber_Field':
+    x: 50
+    y: 50
+    width: 100
+    height: 15
+    maxLength: 55
+    id: 1
+    defaultText: "1"
+vexImg:
+  'img_01':
+    url: '[local]vault.png'
+    x: 10
+    y: 10
+    width: 100
+    height: 100
+    xs: 50
+    ys: 50
+  'img_02':
+    url: '[local]points.png'
+    x: 10
+    y: 10
+    width: 100
+    height: 100
+    xs: 50
+    ys: 50
+vexButton:
+  'button_01':
+    text: '这是一个按钮'
+    url: '[local]button_01.png'
+    x: 10
+    y: 10
+    width: 100
+    height: 100
+  'button_02':
+    text: '这是一个按钮'
+    url: '[local]button_02.png'
+    x: 10
+    y: 10
+    width: 100
+    height: 100
