@@ -6,11 +6,11 @@ import org.bukkit.entity.Player;
 
 public class VexMenuGui extends WishGiftViewGui {
     public VexMenuGui(ConfigMannager config) {
-        super(config.getComponent().getGuiMap().get("menu").getLocalUrl(), config.getComponent().getGuiMap().get("money").getX(), config.getComponent().getGuiMap().get("money").getY(), config.getComponent().getGuiMap().get("money").getWidth(), config.getComponent().getGuiMap().get("money").getHeight());
+        super(config.getComponent().getGuiMap().get("menu").getLocalUrl(), config.getComponent().getGuiMap().get("menu").getX(), config.getComponent().getGuiMap().get("menu").getY(), config.getComponent().getGuiMap().get("menu").getWidth(), config.getComponent().getGuiMap().get("menu").getHeight());
     }
 
     @Override
-    void openGui(Player player) {
+    public void openGui(Player player) {
         VexViewAPI.openGui(player, this);
     }
 }

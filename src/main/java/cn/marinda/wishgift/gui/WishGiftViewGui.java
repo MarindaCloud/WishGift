@@ -14,5 +14,5 @@ public abstract class WishGiftViewGui extends VexGui {
         super(url,x,y,width,height);
     }
 
-    abstract void openGui(Player player);
+    abstract public void openGui(Player player);
 }

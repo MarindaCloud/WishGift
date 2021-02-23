@@ -14,7 +14,7 @@ public class VexVaultGui extends WishGiftViewGui{
     }
 
     @Override
-    void openGui(Player player) {
+    public void openGui(Player player) {
         VexViewAPI.openGui(player,this);
     }
 

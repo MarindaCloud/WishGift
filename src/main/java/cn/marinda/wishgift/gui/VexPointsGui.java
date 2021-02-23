@@ -10,11 +10,11 @@ import java.util.Map;
 
 public class VexPointsGui extends WishGiftViewGui {
     public VexPointsGui(ConfigMannager config) {
-        super(config.getComponent().getGuiMap().get("points").getLocalUrl(), config.getComponent().getGuiMap().get("money").getX(), config.getComponent().getGuiMap().get("money").getY(), config.getComponent().getGuiMap().get("money").getWidth(), config.getComponent().getGuiMap().get("money").getHeight());
+        super(config.getComponent().getGuiMap().get("points").getLocalUrl(), config.getComponent().getGuiMap().get("points").getX(), config.getComponent().getGuiMap().get("points").getY(), config.getComponent().getGuiMap().get("points").getWidth(), config.getComponent().getGuiMap().get("points").getHeight());
     }
 
     @Override
-    void openGui(Player player) {
+    public void openGui(Player player) {
         VexViewAPI.openGui(player, this);
     }
 }
