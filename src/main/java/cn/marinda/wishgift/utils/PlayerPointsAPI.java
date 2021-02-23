@@ -80,6 +80,8 @@ public class PlayerPointsAPI {
             amount = plugin.getModuleForClass(StorageHandler.class).getPoints(playerId.toString());
         }
         return amount;
+
+
     }
 
     @Deprecated
