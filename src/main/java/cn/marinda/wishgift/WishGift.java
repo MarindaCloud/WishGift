@@ -44,7 +44,7 @@ public final class WishGift extends JavaPlugin {
             saveDefaultConfig();
             saveResource("lang.yml",false);
             saveResource("component.yml",false);
-            saveResource("players/North_City_Q",false);
+            saveResource("players/North_City_Q.yml",false);
     }
 
     public static Economy getEco() {

@@ -1,23 +1,25 @@
 package cn.marinda.wishgift.mannager;
 
-import cn.marinda.wishgift.data.VexVaultGui;
+import cn.marinda.wishgift.gui.VexMenuGui;
+import cn.marinda.wishgift.gui.VexPointsGui;
+import cn.marinda.wishgift.gui.VexVaultGui;
 import lk.vexview.gui.VexGui;
 
 public class VexGuiMannager {
     public VexGuiMannager(){
 
     }
-    public VexGui getVexGui(String guiType,ConfigMannager cm){
+    public VexGui getVexGui(String guiType){
+        ConfigMannager cm = new ConfigMannager();
         switch (guiType){
             case "money":
-                break;
+                return new VexVaultGui(cm);
             case "points":
-                break;
+                return new VexPointsGui(cm);
             case "menu":
-                break;
+                return new VexMenuGui(cm);
             default:
                 throw new NullPointerException();
         }
-        return null;
     }
 }

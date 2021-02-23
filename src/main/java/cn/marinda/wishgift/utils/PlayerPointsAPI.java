@@ -81,7 +81,6 @@ public class PlayerPointsAPI {
         }
         return amount;
 
-
     }
 
     @Deprecated
