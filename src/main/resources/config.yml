@@ -1,6 +1,6 @@
 #基本设置
 prefix: '[WishGift]'
-#若有特殊需求案件打开主界面
+#若有特殊需求按键打开主界面
 keyUp: 35
 #许愿每次消耗
 points:
@@ -27,7 +27,7 @@ points:
   #达到指定幸运值
   lucky:
     #幸运值 0-5 以此类推
-   5:
+   "5":
     #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
     prizeItemImage:
       - 'points_jp_01'
@@ -38,7 +38,7 @@ points:
       - '/points give {player} 1000'
       - '/mm give  {player} text1 1'
    #幸运值 6-30 以此类推
-   30:
+   "30":
     #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
     prizeItemImage:
       - 'points_jp_01'
@@ -52,7 +52,7 @@ points:
       - '/points give {player} 1000'
       - '/m {player} 你好幸运'
    #幸运值 31-60 以此类推
-   60:
+   "60":
      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
      prizeItemImage:
      - 'points_jp_06'
@@ -65,7 +65,7 @@ points:
        - '/points give {player} 1000'
        - '/m {player} 你好幸运'
    #幸运值 61-70 以此类推
-   70:
+   "70":
      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
      prizeItemImage:
      - 'points_jp_09'
@@ -77,7 +77,7 @@ points:
        - '/points give {player} 1000'
        - '/m {player} 你好幸运'
    #幸运值 71-90 以此类推
-   90:
+   "90":
      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
      prizeItemImage:
        - 'points_jp_09'
@@ -89,7 +89,7 @@ points:
        - '/points give {player} 1000'
        - '/m {player} 你好幸运'
    #必中
-   100:
+   "100":
      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
      prizeItemImage:
        - 'points_jp_12'
@@ -126,7 +126,7 @@ vault:
   #达到指定幸运值
   lucky:
     #幸运值 0-5 以此类推
-    5:
+    "5":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_01'
@@ -137,7 +137,7 @@ vault:
         - '/points give {player} 1000'
         - '/mm give  {player} text1 1'
     #幸运值 6-30 以此类推
-    30:
+    "30":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_01'
@@ -151,7 +151,7 @@ vault:
         - '/points give {player} 1000'
         - '/m {player} 你好幸运'
     #幸运值 31-60 以此类推
-    60:
+    "60":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_06'
@@ -164,7 +164,7 @@ vault:
         - '/points give {player} 1000'
         - '/m {player} 你好幸运'
     #幸运值 61-70 以此类推
-    70:
+    "70":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_09'
@@ -176,7 +176,7 @@ vault:
         - '/points give {player} 1000'
         - '/m {player} 你好幸运'
     #幸运值 71-90 以此类推
-    90:
+    "90":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_09'
@@ -188,7 +188,7 @@ vault:
         - '/points give {player} 1000'
         - '/m {player} 你好幸运'
     #必中
-    100:
+    "100":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'points_jp_12'
