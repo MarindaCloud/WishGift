@@ -54,7 +54,7 @@ vexTexts:
     y: 10
     text:
       - '这是menu界面'
-    scale: 1
+    scale: 2
   'money_title':
     x: 10
     y: 10

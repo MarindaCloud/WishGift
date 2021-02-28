@@ -10,6 +10,7 @@ import cn.marinda.wishgift.gui.VexVaultGui;
 import cn.marinda.wishgift.gui.WishGiftViewGui;
 import cn.marinda.wishgift.mannager.ConfigMannager;
 import cn.marinda.wishgift.mannager.VexGuiMannager;
+import cn.marinda.wishgift.utils.VexGuiComponentUtils;
 import lk.vexview.api.VexViewAPI;
 import lk.vexview.gui.VexGui;
 import org.bukkit.command.Command;
@@ -30,8 +31,8 @@ public class WishGiftCommand implements CommandExecutor {
             LangConfiguration lang = new LangConfiguration(new File(WishGift.plugin.getDataFolder(),"lang.yml"));
             if(args.length == 1){
                 if(args[0].equalsIgnoreCase("show")) {
-                    System.out.println("show");
                     WishGiftViewGui wish = new VexMenuGui(cm);
+                    VexGuiComponentUtils.defaultTextComponent(cm,"menu",new VexGuiMannager());
                     wish.openGui(player);
                     return true;
                 }
