@@ -33,6 +33,7 @@ public class WishGiftCommand implements CommandExecutor {
                 if(args[0].equalsIgnoreCase("show")) {
                     WishGiftViewGui wish = new VexMenuGui(cm);
                     VexGuiComponentUtils.defaultTextComponent(cm,"menu",new VexGuiMannager());
+
                     wish.openGui(player);
                     return true;
                 }
