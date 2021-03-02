@@ -30,7 +30,7 @@ gui:
         - ''
       vexTextField: ''
       vexButton:
-        - ''
+        - 'button_01'
         - ''
   'points':
     localGui: '[local]points.png'
