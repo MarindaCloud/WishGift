@@ -12,6 +12,7 @@ import java.util.Map;
 public class ConfigData extends WishGiftConfigurations {
     //config data
     private String prefix;
+
     private int keyUp;
     private int point_consume;
     private int point_addNumber;
