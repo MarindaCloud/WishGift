@@ -7,7 +7,7 @@ gui:
     width: 240
     height: 158
     vexText:
-      - 'menu_title'
+      - 'points_title'
     vexImg:
       - 'img_01'
       - 'img_02'
@@ -17,44 +17,54 @@ gui:
       - 'button_01'
       - ''
   'money':
-      localGui: '[local]money.png'
-      x: -1
-      y: -1
-      width: 240
-      height: 158
-      vexText:
-        - ''
-      vexImg:
-        - ''
-        - ''
-        - ''
-      vexTextField: ''
-      vexButton:
-        - 'button_01'
-        - ''
-  'points':
-    localGui: '[local]points.png'
+    localGui: '[local]gui.png'
     x: -1
     y: -1
-    width: 240
-    height: 158
+    width: 300
+    height: 180
     vexText:
-      - ''
+      - 'vault_title'
+      - 'points_jp'
+      - 'points_message'
+      - 'points_pay'
     vexImg:
-      - ''
-      - ''
-      - ''
-    vexTextField: ''
+      - 'slot_01'
+      - 'slot_02'
+      - 'slot_03'
+      - 'slot_04'
+      - 'head'
+    vexTextField: 'points_wishNumber_Field'
     vexButton:
+      - 'button_03'
       - ''
+  'points':
+    localGui: '[local]gui.png'
+    x: -1
+    y: -1
+    width: 300
+    height: 180
+    vexText:
+      - 'points_title'
+      - 'points_jp'
+      - 'points_message'
+      - 'points_pay'
+    vexImg:
+      - 'slot_01'
+      - 'slot_02'
+      - 'slot_03'
+      - 'slot_04'
+      - 'head'
+    vexTextField: 'points_wishNumber_Field'
+    vexButton:
+      - 'button_03'
       - ''
 vexTexts:
   'menu_title':
-    x: 10
-    y: 10
+    x: 20
+    y: 100
     text:
       - '这是menu界面'
-    scale: 2
+    scale: 1
   'money_title':
     x: 10
     y: 10
@@ -62,16 +72,40 @@ vexTexts:
       - '这是menu界面'
     scale: 1
   'points_title':
-    x: 10
-    y: 10
+    x: 125
+    y: 60
     text:
-      - '这是menu界面'
+      - '§b点卷许愿池'
     scale: 1.5
+  'vault_title':
+    x: 125
+    y: 60
+    text:
+      - '§b金币许愿池'
+    scale: 1.5
+  'points_jp':
+    x: 50
+    y: 80
+    text:
+      - '奖池'
+    scale: 1.5
+  'points_message':
+    x: 220
+    y: 80
+    text:
+      - '§a详情栏'
+    scale: 1.5
+  'points_pay':
+    x: 195
+    y: 108
+    text:
+      - '§7次数：'
+    scale: 1
 vexTextField:
   'points_wishNumber_Field':
-    x: 50
-    y: 50
-    width: 100
+    x: 220
+    y: 105
+    width: 50
     height: 15
     maxLength: 55
     id: 0
@@ -101,14 +135,78 @@ vexImg:
     height: 100
     xs: 50
     ys: 50
-vexButton:
-  'button_01':
-    text: '这是一个按钮'
-    url: '[local]button_01.png'
+  'slot_01':
+    url: '[local]apple.png'
+    x: 10
+    y: 100
+    width: 30
+    height: 30
+    xs: 30
+    ys: 30
+  'slot_02':
+    url: '[local]diamond.png'
+    x: 50
+    y: 100
+    width: 30
+    height: 30
+    xs: 30
+    ys: 30
+  'slot_03':
+    url: '[local]tang.png'
+    x: 90
+    y: 100
+    width: 30
+    height: 30
+    xs: 30
+    ys: 30
+  'slot_04':
+    url: '[local]nianye.png'
+    x: 130
+    y: 100
+    width: 30
+    height: 30
+    xs: 30
+    ys: 30
+  'slot_05':
+    url: '[local]slot.png'
+    x: 200
+    y: 10
+    width: 30
+    height: 30
+    xs: 30
+    ys: 30
+  'success':
+    url: '[local]success.png'
     x: 10
     y: 10
     width: 100
     height: 100
+    xs: 50
+    ys: 50
+  'fail':
+    url: '[local]fail.png'
+    x: 10
+    y: 10
+    width: 100
+    height: 100
+    xs: 50
+    ys: 50
+  'head':
+    url: '[local]default_head.png'
+    x: 135
+    y: 0
+    width: 100
+    height: 100
+    xs: 50
+    ys: 50
+vexButton:
+  'button_01':
+    text: '这是一个按钮'
+    url: '[local]button_01.png'
+    x: 50
+    y: 50
+    width: 30
+    height: 10
   'button_02':
     text: '这是一个按钮'
     url: '[local]button_02.png'
@@ -116,3 +214,10 @@ vexButton:
     y: 10
     width: 100
     height: 100
+  'button_03':
+    text: ''
+    url: '[local]button.png'
+    x: 220
+    y: 135
+    width: 50
+    height: 20
