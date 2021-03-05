@@ -111,6 +111,7 @@ public class VexGuiButtonUtils {
                 player.sendMessage("§7许愿失败！");
             }
         }
+
         else if(playerLucky >= 100 && playerLucky <=150){
             player.sendMessage("§6幸运值满100 许愿成功！");
             setPlayerLuckyInfoData(player,data,player.getUniqueId() + ".info.luckyValue",0);
