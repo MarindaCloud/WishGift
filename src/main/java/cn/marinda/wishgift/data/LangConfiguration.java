@@ -30,6 +30,7 @@ public class LangConfiguration extends WishGiftConfigurations {
         setWishSuccessPrefix(config.getString("wishSuccessPrefix"));
         setHelp(config.getStringList("help"));
 
+
     }
 
     public String getWishSuccessPrefix() {
