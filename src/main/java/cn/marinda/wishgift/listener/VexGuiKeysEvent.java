@@ -34,12 +34,13 @@ public class VexGuiKeysEvent implements Listener {
 
     @EventHandler
     public void  onClick(ButtonClickEvent e){
-
         if(gm.getVexGui("points").getButtonById(e.getButtonID())!= null){
             PlayerInfoData data = new PlayerInfoData(e.getPlayer());
-            VexGuiButtonUtils.start(cm,e.getPlayer(),data);
+            VexGuiButtonUtils.pointsStart(cm,e.getPlayer(),data);
         }
         if(gm.getVexGui("money").getButtonById(e.getButtonID())!= null){
+            PlayerInfoData data = new PlayerInfoData(e.getPlayer());
+            VexGuiButtonUtils.start(cm,e.getPlayer(),data);
         }
         if(gm.getVexGui("menu").getButtonById(e.getButtonID())!= null){
         }

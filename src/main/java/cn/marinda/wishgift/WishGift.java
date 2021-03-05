@@ -20,6 +20,7 @@ public final class WishGift extends JavaPlugin {
     public static boolean isVaultEnabled = false;
     public static PlayerPoints points = null;
     public static double version;
+    public static String prefix;
     @Override
     public void onEnable() {
         plugin = this;
@@ -29,6 +30,7 @@ public final class WishGift extends JavaPlugin {
         defaultConfiguration();
         defaultDepenedPluginMessage();
         reloadConfig();
+        prefix = getConfig().getString("prefix");
 
         Bukkit.getConsoleSender().sendMessage("§6[WishGift]插件加载成功！");
     }

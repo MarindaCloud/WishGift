@@ -1,19 +1,5 @@
 #gui组件
 gui:
-  'menu':
-    localGui: '[local]gui.png'
-    x: -1
-    y: -1
-    width: 240
-    height: 158
-    vexText:
-      - 'points_title'
-    vexImg:
-      - 'img_01'
-      - 'img_02'
-      - ''
-    vexTextField: ''
-    vexButton: 'button'
   'money':
     localGui: '[local]gui.png'
     x: -1

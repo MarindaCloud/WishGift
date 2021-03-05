@@ -1,12 +1,11 @@
 package cn.marinda.wishgift.data;
 
 import cn.marinda.wishgift.WishGift;
+import com.google.common.base.Charsets;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,7 +16,7 @@ public class VexViewComponentData {
     private Map<String,VexViewButtonData> btnMap = new HashMap<>();
     private Map<String,VexViewTextFieldData> fieldMap = new HashMap<>();
     private YamlConfiguration config = new YamlConfiguration();
-
+    private File file = null;
     public VexViewComponentData(){
         defaultConfig();
     }
@@ -25,6 +24,7 @@ public class VexViewComponentData {
     void defaultConfig(){
         try {
             config.load(new File(WishGift.plugin.getDataFolder(), "component.yml"));
+            file = new File(WishGift.plugin.getDataFolder(), "component.yml");
             dataDefault();
         } catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
@@ -71,5 +71,16 @@ public class VexViewComponentData {
 
     public Map<String, VexViewTextFieldData> getFieldMap() {
         return fieldMap;
+    }
+
+    public void reloadConfig() {
+        config = YamlConfiguration.loadConfiguration(file);
+
+        final InputStream defConfigStream = WishGift.plugin.getResource("component.yml");
+        if (defConfigStream == null) {
+            return;
+        }
+
+        config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(defConfigStream, Charsets.UTF_8)));
     }
 }

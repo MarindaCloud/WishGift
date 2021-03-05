@@ -10,48 +10,51 @@ points:
   addNumber: 5
   #达到指定幸运值
   lucky:
-   #幸运值 0-30 以此类推
-   "30":
-     #奖池图片列 这里填写控件里面图片的代名 参数控件中设置的名字,并且排序要一致
-     prizeItemImage:
-       - 'slot_01'
-       - 'slot_02'
-     #op命令 从以下中对应图像中发送一条命令执行
-     command:
-       - '/give {player} apple 1'
-       - '/give {player} diamond_sword 1'
-   #幸运值 31-60 以此类推
-   "60":
-     #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
-     prizeItemImage:
-       - 'slot_03'
-       - 'slot_04'
-     #op命令 从以下中对应图像中发送一条命令执行
-     command:
-       - '/give {player} sugar 1'
-       - '/points give {player} 1000'
-       - '/m {player} 你好幸运'
-   #幸运值 71-90 以此类推
-   "90":
-     #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
-     prizeItemImage:
-       - 'points_jp_09'
-       - 'points_jp_10'
-       - 'points_jp_11'
-     #op命令 从以下中随机抽选一条命令执行
-     command:
-       - '/eco give {player} 1000'
-       - '/points give {player} 1000'
-       - '/m {player} 你好幸运'
-   #必中
-   "100":
-     #是否支持重复中某物品
-     isRepeat: false
-     #op命令 从以下中随机抽选一条命令执行
-     command:
-       - '/eco give {player} 1000'
-       - '/points give {player} 1000'
-       - '/m {player} 你好幸运'
+    #幸运值 0-30 以此类推
+    "30":
+      #奖池图片列 这里填写控件里面图片的代名 参数控件中设置的名字,并且排序要一致
+      prizeItemImage:
+        - 'slot_01'
+        - 'slot_02'
+        - 'slot_03'
+      #op命令 从以下中对应图像中发送一条命令执行
+      command:
+        - '/give %player_name% apple 1'
+        - '/give %player_name% diamond_sword 1'
+        - '/give %player_name% diamond 1'
+    #幸运值 31-60 以此类推
+    "60":
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'slot_03'
+        - 'slot_04'
+        - 'slot_05'
+      #op命令 从以下中对应图像中发送一条命令执行
+      command:
+        - '/give %player_name% sugar 1'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'
+    #幸运值 71-90 以此类推
+    "90":
+      #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
+      prizeItemImage:
+        - 'points_jp_09'
+        - 'points_jp_10'
+        - 'points_jp_11'
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give %player_name% 1000'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'
+    #必中
+    "100":
+      #是否支持重复中某物品
+      isRepeat: false
+      #op命令 从以下中随机抽选一条命令执行
+      command:
+        - '/eco give %player_name% 1000'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'
 vault:
   #默认100金币一次
   consume: 100
@@ -65,21 +68,24 @@ vault:
       prizeItemImage:
         - 'slot_01'
         - 'slot_02'
+        - 'slot_03'
       #op命令 从以下中对应图像中发送一条命令执行
       command:
-        - '/give {player} apple 1'
-        - '/give {player} diamond_sword 1'
+        - '/give %player_name% apple 1'
+        - '/give %player_name% diamond_sword 1'
+        - '/give %player_name% diamond 1'
     #幸运值 31-60 以此类推
     "60":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
       prizeItemImage:
         - 'slot_03'
         - 'slot_04'
+        - 'slot_05'
       #op命令 从以下中对应图像中发送一条命令执行
       command:
-        - '/give {player} sugar 1'
-        - '/points give {player} 1000'
-        - '/m {player} 你好幸运'
+        - '/give %player_name% sugar 1'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'
     #幸运值 71-90 以此类推
     "90":
       #奖池图片列 这里填写控件里面图片的代名（辅助一些有自制材质包的服务器)
@@ -89,15 +95,15 @@ vault:
         - 'points_jp_11'
       #op命令 从以下中随机抽选一条命令执行
       command:
-        - '/eco give {player} 1000'
-        - '/points give {player} 1000'
-        - '/m {player} 你好幸运'
+        - '/eco give %player_name% 1000'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'
     #必中
     "100":
       #是否支持重复中某物品
       isRepeat: false
       #op命令 从以下中随机抽选一条命令执行
       command:
-        - '/eco give {player} 1000'
-        - '/points give {player} 1000'
-        - '/m {player} 你好幸运'
+        - '/eco give %player_name% 1000'
+        - '/points give %player_name% 1000'
+        - '/m %player_name% 你好幸运'

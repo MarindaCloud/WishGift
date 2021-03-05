@@ -5,10 +5,6 @@ wishLoseMsg: '§c失败乃成功之母，下一次必中'
 #help
 help:
   - '§7§m-----------§6[WishGift]§7§m-----------'
-  - '§6/wg show §b打开祈福主面板'
   - '§6/wg vault show §b打开金币祈福面板'
   - '§6/wg points show §b打开点券祈福主面板'
-  - '§6/wg set [玩家名] [幸运值] §b设置玩家的幸运值'
-  - '§6/wg add [玩家名] [幸运值] §b增加玩家的幸运值'
-  - '§6/wg take [玩家名] [幸运值] §b扣除玩家的幸运值'
   - '§6/wg reload §b重载插件'

@@ -37,7 +37,8 @@ public class ConfigData{
         this.point_consume = getConfig().getInt("points.consume");
         this.pointsTotalWishPrizeImg = getConfig().getStringList("points.totalWishPrizeImg");
         for(String key : getConfig().getConfigurationSection("points.lucky").getKeys(false)){
-            this.luckyData.put(key,new PointsLuckyData(config.getStringList("points.lucky." + key + "prizeItemImage"),config.getStringList("points.lucky." + key + "command")));
+            this.luckyData.put(key,new PointsLuckyData(config.getStringList("points.lucky." + key + ".prizeItemImage"),config.getStringList("points.lucky." + key + ".command")));
+
         }
         this.luckyData.remove("100");
         this.maxLuckyData.put("100",new PointsLuckyMaxData(config.getStringList("points.lucky.100.prizeItemImage"),config.getStringList("points.lucky.100.command"),config.getBoolean("points.lucky.100.isRepeat")));
@@ -45,7 +46,7 @@ public class ConfigData{
         this.vault_addNumber = getConfig().getInt("vault.addNumber");
         this.vaultTotalWishPrizeImg = getConfig().getStringList("vault.totalWishPrizeImg");
         for(String key : getConfig().getConfigurationSection("vault.lucky").getKeys(false)){
-            this.vaultLucky.put(key,new VaultLuckyData(config.getStringList("vault.lucky." + key + "prizeItemImage"),config.getStringList("vault.lucky." + key + "command")));
+            this.vaultLucky.put(key,new VaultLuckyData(config.getStringList("vault.lucky." + key + ".prizeItemImage"),config.getStringList("vault.lucky." + key + ".command")));
         }
         this.vaultLucky.remove("100");
         this.vaultMaxLuckyData.put("100",new VaultLuckyMaxData(config.getStringList("vault.lucky.100.prizeItemImage"),config.getStringList("vault.lucky.100.command"),config.getBoolean("vault.lucky.100.isRepeat")));

@@ -28,10 +28,10 @@ public class PlayerInfoData {
         this.luckyValue = getConfig().getInt(player.getUniqueId() + ".info.luckyValue");
         this.getGift = getConfig().getStringList(player.getUniqueId() + ".info.getGift");
     }
-    public void reloadConfig() {
+    public void reloadConfig(Player player) {
         config = YamlConfiguration.loadConfiguration(file);
 
-        final InputStream defConfigStream = WishGift.plugin.getResource("config.yml");
+        final InputStream defConfigStream = WishGift.plugin.getResource("players/" + player.getName() + ".yml");
         if (defConfigStream == null) {
             return;
         }

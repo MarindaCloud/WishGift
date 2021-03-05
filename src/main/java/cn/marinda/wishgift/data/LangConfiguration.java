@@ -1,8 +1,12 @@
 package cn.marinda.wishgift.data;
 
+import cn.marinda.wishgift.WishGift;
+import com.google.common.base.Charsets;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,18 +16,18 @@ public class LangConfiguration extends WishGiftConfigurations {
     private String wishTakeVaultPrefix;
     private List<String> help = new ArrayList<String>();
     private YamlConfiguration config = new YamlConfiguration();
-
+    private File file = null;
     public LangConfiguration(File file) {
         super(file);
-        defaultConfig(file);
+        defaultConfig(new File(WishGift.plugin.getDataFolder(),"lang.yml"));
     }
 
     @Override
     void defaultConfig(File file) {
         config = YamlConfiguration.loadConfiguration(file);
+        file = new File(WishGift.plugin.getDataFolder(),"lang.yml");
         setWishLoseMsg(config.getString("wishLoseMsg"));
-        setWishSuccessPrefix(config.getString("WishSuccessPrefix"));
-        setWishTakeVaultPrefix(config.getString("WishTakeVaultPrefix"));
+        setWishSuccessPrefix(config.getString("wishSuccessPrefix"));
         setHelp(config.getStringList("help"));
     }
 
@@ -62,5 +66,16 @@ public class LangConfiguration extends WishGiftConfigurations {
     @Override
     public YamlConfiguration getConfig() {
         return config;
+    }
+
+    public void reloadConfig() {
+        config = YamlConfiguration.loadConfiguration(file);
+
+        final InputStream defConfigStream = WishGift.plugin.getResource("lang.yml");
+        if (defConfigStream == null) {
+            return;
+        }
+
+        config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(defConfigStream, Charsets.UTF_8)));
     }
 }
