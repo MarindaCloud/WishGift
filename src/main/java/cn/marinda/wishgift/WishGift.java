@@ -112,4 +112,5 @@ public final class WishGift extends JavaPlugin {
         return points;
     }
 
+
 }

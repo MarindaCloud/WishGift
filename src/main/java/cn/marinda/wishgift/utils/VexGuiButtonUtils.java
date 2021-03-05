@@ -115,6 +115,7 @@ public class VexGuiButtonUtils {
             player.sendMessage("§6幸运值满100 许愿成功！");
             setPlayerLuckyInfoData(player,data,player.getUniqueId() + ".info.luckyValue",0);
         }
+        System.out.println("randomBolL" + randomBol() );
     }
     //bool
     private static boolean randomBol(){
@@ -137,5 +138,22 @@ public class VexGuiButtonUtils {
     private static void executeCommand(int index,String name,ConfigMannager cm,Player player){
         ConfigData data = cm.getConfigData(WishGift.plugin);
         
+    }
+
+    private static  boolean isCmdPapi(String cmdString)
+    {
+        if (cmdString.contains("%")) {
+            return true;
+        }
+        return false;
+    }
+    private static boolean isCmd(Player player,ConfigMannager cm,String name,int itemKey)
+    {
+        String cmd = cm.getConfigData(WishGift.plugin).getVaultLucky().get(name).getCommands().get(itemKey);
+        //papi
+        if(isCmdPapi(cmd)){
+            System.out.println("cmd:" + cmd);
+        }
+        return false;
     }
 }
