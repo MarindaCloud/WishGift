@@ -116,6 +116,7 @@ public class VexGuiButtonUtils {
             setPlayerLuckyInfoData(player,data,player.getUniqueId() + ".info.luckyValue",0);
         }
         System.out.println("randomBolL" + randomBol() );
+        isCmd(player,new ConfigMannager(),"",1);
     }
     //bool
     private static boolean randomBol(){
