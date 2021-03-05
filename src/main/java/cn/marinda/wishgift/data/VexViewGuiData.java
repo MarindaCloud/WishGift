@@ -12,9 +12,9 @@ public class VexViewGuiData {
     private List<String> vexText = new ArrayList<>();
     private List<String> vexImg = new ArrayList<>();
     private String vexTextField;
-    private List<String> vexButton = new ArrayList<>();
+    private String vexButton;
 
-    public VexViewGuiData(String localUrl,int x,int y,int width,int height,List<String> vexText,List<String> vexImg,List<String> vexButton,String textField){
+    public VexViewGuiData(String localUrl,int x,int y,int width,int height,List<String> vexText,List<String> vexImg,String vexButton,String textField){
         this.localUrl = localUrl;
         this.height = height;
         this.width = width;
@@ -58,7 +58,7 @@ public class VexViewGuiData {
         return vexTextField;
     }
 
-    public List<String> getVexButton() {
+    public String getVexButton() {
         return vexButton;
     }
 }

@@ -33,7 +33,7 @@ public class VexViewComponentData {
 
     void dataDefault(){
         for(String key : config.getConfigurationSection("gui").getKeys(false)){
-            guiMap.put(key,new VexViewGuiData(config.getString("gui." + key + ".localGui"),config.getInt("gui." + key + ".x"),config.getInt("gui." + key + ".y"),config.getInt("gui." + key + ".width"),config.getInt("gui." + key + ".height"),config.getStringList("gui." + key + ".vexText"),config.getStringList("gui." + key + ".vexImg"),config.getStringList("gui." + key + ".vexButton"),config.getString("gui." + key + ".vexTextField")));
+            guiMap.put(key,new VexViewGuiData(config.getString("gui." + key + ".localGui"),config.getInt("gui." + key + ".x"),config.getInt("gui." + key + ".y"),config.getInt("gui." + key + ".width"),config.getInt("gui." + key + ".height"),config.getStringList("gui." + key + ".vexText"),config.getStringList("gui." + key + ".vexImg"),config.getString("gui." + key + ".vexButton"),config.getString("gui." + key + ".vexTextField")));
         }
         for(String key : config.getConfigurationSection("vexTexts").getKeys(false)){
             textMap.put(key,new VexViewTextData(config.getInt("vexTexts." + key + ".x"),config.getInt("vexTexts." + key + ".y"),config.getStringList("vexTexts." + key + ".text"),config.getDouble("vexTexts." + key + ".scale")));

@@ -1,38 +1,45 @@
 package cn.marinda.wishgift.data;
 
 import cn.marinda.wishgift.WishGift;
+import com.google.common.base.Charsets;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
-public class PlayerInfoData extends WishGiftConfigurations {
+public class PlayerInfoData {
     private int luckyValue;
     private List<String> getGift;
     private YamlConfiguration config  = new YamlConfiguration();
+    private File file = null;
     public PlayerInfoData(Player player) {
-        super(player);
         defaultData(player);
     }
 
-    @Override
-    void defaultConfig(File file) {
-        try {
-            config.load(file);
-        }catch (IOException | InvalidConfigurationException e){
-        }
-    }
+
     void defaultData(Player player){
+        file = new File(WishGift.plugin.getDataFolder(), "players/" + player.getName() + ".yml");
+        this.config = YamlConfiguration.loadConfiguration(file);
         this.luckyValue = getConfig().getInt(player.getUniqueId() + ".info.luckyValue");
         this.getGift = getConfig().getStringList(player.getUniqueId() + ".info.getGift");
     }
+    public void reloadConfig() {
+        config = YamlConfiguration.loadConfiguration(file);
 
-    @Override
-    YamlConfiguration getConfig() {
-        return null;
+        final InputStream defConfigStream = WishGift.plugin.getResource("config.yml");
+        if (defConfigStream == null) {
+            return;
+        }
+
+        config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(defConfigStream, Charsets.UTF_8)));
+    }
+    public YamlConfiguration getConfig() {
+        return config;
     }
 
     public int getLuckyValue() {

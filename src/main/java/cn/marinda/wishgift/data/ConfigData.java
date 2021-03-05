@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ConfigData extends WishGiftConfigurations {
+public class ConfigData{
     //config data
     private String prefix;
 
@@ -25,13 +25,11 @@ public class ConfigData extends WishGiftConfigurations {
     private List<String> vaultTotalWishPrizeImg = new ArrayList<>();
     private Map<String,VaultLuckyMaxData> vaultMaxLuckyData = new HashMap<>();
     private YamlConfiguration config ;
-    public ConfigData(File file) {
-        super(file);
-        defaultConfig(file);
+    public ConfigData() {
+        defaultConfig();
     }
 
-    @Override
-    void defaultConfig(File file) {
+    void defaultConfig() {
         config = (YamlConfiguration) WishGift.plugin.getConfig();
         this.prefix = getConfig().getString("prefix");
         this.keyUp = getConfig().getInt("keyUp");
@@ -104,7 +102,6 @@ public class ConfigData extends WishGiftConfigurations {
         return vaultMaxLuckyData;
     }
 
-    @Override
     YamlConfiguration getConfig() {
         return config;
     }

@@ -1,7 +1,6 @@
 #语言消息文件
 wishSuccessPrefix: '§b恭喜你！许愿成功'
 wishLoseMsg: '§c失败乃成功之母，下一次必中'
-wishTakeVaultPrefix: '§6你确定消耗金币'
 
 #help
 help:

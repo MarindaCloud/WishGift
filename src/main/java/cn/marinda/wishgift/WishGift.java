@@ -1,8 +1,10 @@
 package cn.marinda.wishgift;
 
 import cn.marinda.wishgift.commands.WishGiftCommand;
+import cn.marinda.wishgift.listener.PlayerEvent;
 import cn.marinda.wishgift.listener.VexGuiKeysEvent;
 import cn.marinda.wishgift.mannager.ConfigMannager;
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.milkbowl.vault.economy.Economy;
 import org.black_ixx.playerpoints.PlayerPoints;
 import org.bukkit.Bukkit;
@@ -26,6 +28,8 @@ public final class WishGift extends JavaPlugin {
         defaultPluginMannager();
         defaultConfiguration();
         defaultDepenedPluginMessage();
+        reloadConfig();
+
         Bukkit.getConsoleSender().sendMessage("§6[WishGift]插件加载成功！");
     }
 
@@ -38,6 +42,7 @@ public final class WishGift extends JavaPlugin {
     private void defaultPluginMannager(){
         Bukkit.getPluginCommand("wg").setExecutor(new WishGiftCommand());
         Bukkit.getPluginManager().registerEvents(new VexGuiKeysEvent(),this);
+        Bukkit.getPluginManager().registerEvents(new PlayerEvent(),this);
     }
 
     private void defaultConfiguration(){

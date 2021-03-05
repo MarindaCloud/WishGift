@@ -13,9 +13,7 @@ gui:
       - 'img_02'
       - ''
     vexTextField: ''
-    vexButton:
-      - 'button_01'
-      - ''
+    vexButton: 'button'
   'money':
     localGui: '[local]gui.png'
     x: -1
@@ -34,9 +32,7 @@ gui:
       - 'slot_04'
       - 'head'
     vexTextField: 'points_wishNumber_Field'
-    vexButton:
-      - 'button_03'
-      - ''
+    vexButton: 'button_vault'
   'points':
     localGui: '[local]gui.png'
     x: -1
@@ -55,9 +51,7 @@ gui:
       - 'slot_04'
       - 'head'
     vexTextField: 'points_wishNumber_Field'
-    vexButton:
-      - 'button_03'
-      - ''
+    vexButton: 'button_points'
 vexTexts:
   'menu_title':
     x: 20
@@ -200,21 +194,21 @@ vexImg:
     xs: 50
     ys: 50
 vexButton:
-  'button_01':
-    text: '这是一个按钮'
-    url: '[local]button_01.png'
-    x: 50
-    y: 50
-    width: 30
-    height: 10
-  'button_02':
-    text: '这是一个按钮'
-    url: '[local]button_02.png'
-    x: 10
-    y: 10
-    width: 100
-    height: 100
-  'button_03':
+  'button':
+    text: ''
+    url: '[local]button.png'
+    x: 220
+    y: 135
+    width: 50
+    height: 20
+  'button_vault':
+    text: ''
+    url: '[local]button.png'
+    x: 220
+    y: 135
+    width: 50
+    height: 20
+  'button_points':
     text: ''
     url: '[local]button.png'
     x: 220

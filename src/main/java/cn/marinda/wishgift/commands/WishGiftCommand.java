@@ -2,21 +2,14 @@ package cn.marinda.wishgift.commands;
 
 import cn.marinda.wishgift.WishGift;
 import cn.marinda.wishgift.data.LangConfiguration;
-import cn.marinda.wishgift.data.VexGuiTest;
-import cn.marinda.wishgift.data.WishGiftConfigurations;
 import cn.marinda.wishgift.gui.VexMenuGui;
 import cn.marinda.wishgift.gui.VexPointsGui;
 import cn.marinda.wishgift.gui.VexVaultGui;
 import cn.marinda.wishgift.gui.WishGiftViewGui;
 import cn.marinda.wishgift.mannager.ConfigMannager;
-import cn.marinda.wishgift.mannager.VexGuiMannager;
-import cn.marinda.wishgift.utils.VexGuiComponentUtils;
-import lk.vexview.api.VexViewAPI;
-import lk.vexview.gui.VexGui;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 
 import java.io.File;

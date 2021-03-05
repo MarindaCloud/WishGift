@@ -1,6 +1,5 @@
 package cn.marinda.wishgift.gui;
 
-import cn.marinda.wishgift.utils.VexGuiComponentUtils;
 import cn.marinda.wishgift.mannager.ConfigMannager;
 import cn.marinda.wishgift.mannager.VexGuiMannager;
 import lk.vexview.api.VexViewAPI;
@@ -63,7 +62,6 @@ public class VexMenuGui extends WishGiftViewGui {
     }
     private void print(VexGuiMannager gm){
         for(VexComponents str : this.getComponents()){
-            System.out.println("type:" + str.getType() );
         }
     }
     private void defaultAddTextComponent(ConfigMannager cm, String guiName){
@@ -81,7 +79,6 @@ public class VexMenuGui extends WishGiftViewGui {
     }
     private void addTextComponent(List<String> list, ConfigMannager cm){
         for(String str : list){
-            System.out.println("str:" + str);
             //控件名
             components.add(new VexText(cm.getComponent().getTextMap().get(str).getX(),cm.getComponent().getTextMap().get(str).getY(),cm.getComponent().getTextMap().get(str).getTextList(),cm.getComponent().getTextMap().get(str).getScale()));  ;
         }
@@ -130,26 +127,18 @@ public class VexMenuGui extends WishGiftViewGui {
 
     private  void defaultAddButtonComponent(ConfigMannager cm, String guiName){
         try {
-            List<String> vexButtonComponent = cm.getComponent().getGuiMap().get(guiName).getVexButton();
-            List<String> text = new ArrayList<>();
-            for (String s : vexButtonComponent) {
-                //储存text列表
-                if (cm.getComponent().getBtnMap().containsKey(s)) {
-                    text.add(s);
-                    continue;
-                }
+            String vexButtonComponent = cm.getComponent().getGuiMap().get(guiName).getVexButton();
+                if (cm.getComponent().getBtnMap().containsKey(vexButtonComponent)) {
+                    addButtonComponent(vexButtonComponent,cm);
             }
-            addButtonComponent(text,cm);
+
         }catch (NullPointerException e){
             Bukkit.getConsoleSender().sendMessage("§c检查配置文件中按钮gui设置是否有误！");
         }
-
     }
 
-    private void addButtonComponent(List<String> list, ConfigMannager cm){
-        for(String str : list){
+    private void addButtonComponent(String str, ConfigMannager cm){
             //控件名
             components.add(new VexButton(cm.getComponent().getBtnMap().get(str).getId(),cm.getComponent().getBtnMap().get(str).getBtnText(),cm.getComponent().getBtnMap().get(str).getUrl(),cm.getComponent().getBtnMap().get(str).getUrl(),cm.getComponent().getBtnMap().get(str).getX(),cm.getComponent().getBtnMap().get(str).getY(),cm.getComponent().getBtnMap().get(str).getWidth(),cm.getComponent().getBtnMap().get(str).getHeight()));
-        }
     }
 }
