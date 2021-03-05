@@ -39,6 +39,7 @@ public final class WishGift extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§7[WishGift]插件卸载成功！");
     }
 
+
     private void defaultPluginMannager(){
         Bukkit.getPluginCommand("wg").setExecutor(new WishGiftCommand());
         Bukkit.getPluginManager().registerEvents(new VexGuiKeysEvent(),this);
