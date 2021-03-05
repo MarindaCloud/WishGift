@@ -29,7 +29,6 @@ public class LangConfiguration extends WishGiftConfigurations {
         setWishLoseMsg(config.getString("wishLoseMsg"));
         setWishSuccessPrefix(config.getString("wishSuccessPrefix"));
         setHelp(config.getStringList("help"));
-
     }
 
     public String getWishSuccessPrefix() {
