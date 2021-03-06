@@ -27,6 +27,11 @@ public final class WishGift extends JavaPlugin {
         // Plugin startup logic
         version = Double.parseDouble(Bukkit.getVersion().substring(Bukkit.getVersion().indexOf("MC:") + 3, Bukkit.getVersion().length() - 3));
         defaultPluginMannager();
+        if(!isSourceExites()){
+            defaultConfiguration();
+        }else{
+            Bukkit.getServer().getConsoleSender().sendMessage("§a[WishGift]配置文件初始化完毕");
+        }
         defaultConfiguration();
         defaultDepenedPluginMessage();
         reloadConfig();
@@ -54,7 +59,10 @@ public final class WishGift extends JavaPlugin {
             saveResource("component.yml",false);
             saveResource("players/North_City_Q.yml",false);
     }
-
+    private boolean isSourceExites(){
+        boolean bol = new File(this.getDataFolder(),"lang.yml").exists() && new File(this.getDataFolder(),"component.yml").exists() && new File(this.getDataFolder(),"players/North_City_Q.yml").exists();
+        return bol;
+    }
     public static Economy getEco() {
         return eco;
     }
