@@ -42,7 +42,5 @@ public class VexGuiKeysEvent implements Listener {
             PlayerInfoData data = new PlayerInfoData(e.getPlayer());
             VexGuiButtonUtils.start(cm,e.getPlayer(),data);
         }
-        if(gm.getVexGui("menu").getButtonById(e.getButtonID())!= null){
-        }
     }
 }

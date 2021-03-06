@@ -2,8 +2,6 @@ package cn.marinda.wishgift.commands;
 
 import cn.marinda.wishgift.WishGift;
 import cn.marinda.wishgift.data.LangConfiguration;
-import cn.marinda.wishgift.data.PlayerInfoData;
-import cn.marinda.wishgift.gui.VexMenuGui;
 import cn.marinda.wishgift.gui.VexPointsGui;
 import cn.marinda.wishgift.gui.VexVaultGui;
 import cn.marinda.wishgift.gui.WishGiftViewGui;
@@ -25,14 +23,12 @@ public class WishGiftCommand implements CommandExecutor {
             LangConfiguration lang = new LangConfiguration(new File(WishGift.plugin.getDataFolder(),"lang.yml"));
             if(args.length == 1){
                 if(args[0].equalsIgnoreCase("reload")) {
-                    WishGiftViewGui wish = new VexMenuGui(cm);
                     ConfigMannager cm = new ConfigMannager();
                     WishGift.plugin.reloadConfig();
 //                    lang.reloadConfig();
                     cm.getComponent().reloadConfig();
                     cm.getPlayerInfoData(player).reloadConfig(player);
                     player.sendMessage(cm.getConfigData(WishGift.plugin).getPrefix() + "初始化完毕");
-                    wish.openGui(player);
                     return true;
                 }
             }

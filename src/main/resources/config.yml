@@ -48,8 +48,6 @@ points:
         - '/m %player_name% 你好幸运'
     #必中
     "100":
-      #是否支持重复中某物品
-      isRepeat: false
       #op命令 从以下中随机抽选一条命令执行
       command:
         - '/eco give %player_name% 1000'
@@ -100,8 +98,6 @@ vault:
         - '/m %player_name% 你好幸运'
     #必中
     "100":
-      #是否支持重复中某物品
-      isRepeat: false
       #op命令 从以下中随机抽选一条命令执行
       command:
         - '/eco give %player_name% 1000'

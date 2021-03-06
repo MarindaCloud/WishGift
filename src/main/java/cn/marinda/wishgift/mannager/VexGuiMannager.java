@@ -1,6 +1,5 @@
 package cn.marinda.wishgift.mannager;
 
-import cn.marinda.wishgift.gui.VexMenuGui;
 import cn.marinda.wishgift.gui.VexPointsGui;
 import cn.marinda.wishgift.gui.VexVaultGui;
 import lk.vexview.gui.VexGui;
@@ -16,10 +15,7 @@ public class VexGuiMannager {
                 return new VexVaultGui(cm);
             case "points":
                 return new VexPointsGui(cm);
-            case "menu":
-                return new VexMenuGui(cm);
-            default:
-                throw new NullPointerException();
         }
+        return null;
     }
 }

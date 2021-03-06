@@ -41,7 +41,7 @@ public class ConfigData{
 
         }
         this.luckyData.remove("100");
-        this.maxLuckyData.put("100",new PointsLuckyMaxData(config.getStringList("points.lucky.100.prizeItemImage"),config.getStringList("points.lucky.100.command"),config.getBoolean("points.lucky.100.isRepeat")));
+        this.maxLuckyData.put("100",new PointsLuckyMaxData(config.getStringList("points.lucky.100.prizeItemImage"),config.getStringList("points.lucky.100.command")));
         this.vault_consume = getConfig().getInt("vault.consume");
         this.vault_addNumber = getConfig().getInt("vault.addNumber");
         this.vaultTotalWishPrizeImg = getConfig().getStringList("vault.totalWishPrizeImg");
@@ -49,7 +49,7 @@ public class ConfigData{
             this.vaultLucky.put(key,new VaultLuckyData(config.getStringList("vault.lucky." + key + ".prizeItemImage"),config.getStringList("vault.lucky." + key + ".command")));
         }
         this.vaultLucky.remove("100");
-        this.vaultMaxLuckyData.put("100",new VaultLuckyMaxData(config.getStringList("vault.lucky.100.prizeItemImage"),config.getStringList("vault.lucky.100.command"),config.getBoolean("vault.lucky.100.isRepeat")));
+        this.vaultMaxLuckyData.put("100",new VaultLuckyMaxData(config.getStringList("vault.lucky.100.prizeItemImage"),config.getStringList("vault.lucky.100.command")));
     }
 
     public String getPrefix() {

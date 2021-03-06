@@ -5,17 +5,17 @@ import java.util.List;
 
 public class PointsLuckyMaxData {
     private List<String> commands = new ArrayList<>();
-    private boolean isRepeat = false;
-    public PointsLuckyMaxData(List<String> prizeItemImage,List<String> commands,boolean isRepeat){
+//    private boolean isRepeat = false;
+    public PointsLuckyMaxData(List<String> prizeItemImage,List<String> commands){
         this.commands = commands;
-        this.isRepeat = isRepeat;
+//        this.isRepeat = isRepeat;
     }
 
     public List<String> getCommands() {
         return commands;
     }
 
-    public boolean getIsRepeat() {
-        return isRepeat;
-    }
+//    public boolean getIsRepeat() {
+//        return isRepeat;
+//    }
 }

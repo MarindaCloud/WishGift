@@ -27,12 +27,11 @@ public final class WishGift extends JavaPlugin {
         // Plugin startup logic
         version = Double.parseDouble(Bukkit.getVersion().substring(Bukkit.getVersion().indexOf("MC:") + 3, Bukkit.getVersion().length() - 3));
         defaultPluginMannager();
-        if(!isSourceExites()){
-            defaultConfiguration();
-        }else{
-            Bukkit.getServer().getConsoleSender().sendMessage("§a[WishGift]配置文件初始化完毕");
-        }
-        defaultConfiguration();
+            if (!isSourceExites()) {
+                defaultConfiguration();
+            } else {
+                Bukkit.getServer().getConsoleSender().sendMessage("§a[WishGift]配置文件初始化完毕");
+            }
         defaultDepenedPluginMessage();
         reloadConfig();
         prefix = getConfig().getString("prefix");
